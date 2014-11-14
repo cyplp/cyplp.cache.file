@@ -24,9 +24,12 @@ setup(name='cyplp.cache.file',
       zip_safe=False,
       install_requires=[
           'setuptools',
+	   'dogpile.cache'
           # -*- Extra requirements: -*-
       ],
       entry_points="""
       # -*- Entry points: -*-
+      [dogpile.cache]
+      cyplp_cache_file = cyplp.cache.file:CacheFileBackend
       """,
       )
